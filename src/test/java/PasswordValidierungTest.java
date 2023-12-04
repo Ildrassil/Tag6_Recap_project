@@ -6,8 +6,8 @@ class PasswordValidierungTest {
 
     @Test
     void PasswordValidierung(){
-        String inputPassowrd = "Testpasswort8354!";
-        String actualPassowrd = "Testpasswort8354!";
+        String inputPassowrd = "TestFische8976!";
+        String actualPassowrd = "TestFische8976!";
         boolean isValid = PasswordValidierung.password(inputPassowrd,actualPassowrd);
         boolean expected = true;
         assertEquals( expected, isValid);

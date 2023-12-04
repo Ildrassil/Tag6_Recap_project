@@ -7,7 +7,6 @@ public class PasswordValidierung {
         if( password.length == 0 || password.length > n || password.length < m){
             return false;
         }
-        String passwordUsualCheck = password.toString();
 
 
         boolean upper = false;
@@ -48,21 +47,28 @@ public class PasswordValidierung {
 
 
 
-    public static boolean password(String actualPassword, String inputPassword){
+    public static boolean password(String actualPassword, String inputPassword) {
         char[] actualPasswordCharArray = actualPassword.toCharArray();
-        boolean isActualPasswordAPassword = isPassword(actualPasswordCharArray, 8,99);
+        boolean isActualPasswordAPassword = isPassword(actualPasswordCharArray, 8, 99);
         boolean passwordIsValid = false;
-        if(isActualPasswordAPassword){
-           passwordIsValid = passwordCheck(actualPassword, inputPassword);
+        String[] commonPass = {"1234", "testing", "dragon", "password","passwort", "abc", "ABC", "Abc", "aBc", "ABc", "abC", "aBC", "9876","Test","Testing","test", "qwerty", "football", "111111", "1111", "letmein", "trustnot", "princess", "Iloveu", "Iloveyou", "iloveyou", "sunshine", "Sunshine", "adobe123", "123456789"};
+
+        for (int i = 0; i < commonPass.length; i++) {
+            if (actualPassword.contains(commonPass[i])) {
+                return false;
+            }
+
+        }
+        if (isActualPasswordAPassword) {
+            passwordIsValid = passwordCheck(actualPassword, inputPassword);
         }
         return passwordIsValid;
 
-
-
     }
+
     public static void CheckPassword()
     {
-        String[] commonPass =  {"1234", "testing", "dragon", "passowrd","abc","ABC","Abc","aBc","ABc","abC","aBC", "9876", "qwerty", "football","111111","1111","letmein","trustnot","princess","Iloveu","Iloveyou","iloveyou","sunshine","Sunshine","adobe123","123456789"};
+        String[] commonPass =  {"1234", "testing", "dragon", "password","Test", "test","passwort","abc","ABC","Abc","aBc","ABc","abC","aBC", "9876", "qwerty", "football","111111","1111","letmein","trustnot","princess","Iloveu","Iloveyou","iloveyou","sunshine","Sunshine","adobe123","123456789"};
 
         System.out.println("Requirements for the Password:");
         System.out.println("1. It must contain at least one Capital Letter.");
@@ -76,7 +82,7 @@ public class PasswordValidierung {
         boolean validPassword = isPassword(passwordArray, 8, 99);
         if(validPassword == true) {
             for (int i = 0; i < commonPass.length; i++) {
-                if (password.contains(commonPass[i])) {
+                if (commonPass[i].contains(password)) {
                     System.out.println("Your Passowrd is too Weak. Please read the Requirements again.");
                     CheckPassword();
                 }
