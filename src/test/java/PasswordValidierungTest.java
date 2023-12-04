@@ -8,8 +8,8 @@ class PasswordValidierungTest {
 
     @Test
     void PasswordValidierung(){
-        String inputPassowrd = "TestFische8976!";
-        String actualPassowrd = "TestFische8976!";
+        String inputPassowrd = "neueFische8976!";
+        String actualPassowrd = "neueFische8976!";
         boolean isValid = PasswordValidierung.password(inputPassowrd,actualPassowrd);
         boolean expected = true;
         assertEquals( expected, isValid);
@@ -29,7 +29,7 @@ class PasswordValidierungTest {
     @Test
     void PasswordValidCheck_whenPasswordIsRandom_ThenTrue(){
 
-
+        String generatedString = PasswordValidierung.passwordGenerate();
         char [] generated = generatedString.toCharArray();
         boolean isValid = PasswordValidierung.isPassword(generated, 8,99);
         boolean expected = true;

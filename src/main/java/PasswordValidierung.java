@@ -66,22 +66,26 @@ public class PasswordValidierung {
         return passwordIsValid;
 
     }
-    public static String password() {
-        StringBuilder genreatedString = new StringBuilder();
-
-        Random randomChar = new Random();
-        for (int i = 0; i <= 15; i++){
-            genreatedString.append(i).
+    public static String passwordGenerate() {
+        StringBuilder builder = new StringBuilder();
+        int randomLength = new Random().nextInt(8,99);
+        for (int i = 0; i < randomLength; i++) {
+            char a = (char) new Random().nextInt(33,126);
+            builder.append(a);
         }
-
-
-
-        String generatedString = random.ints(leftLimit, rightLimit + 1)
-                .filter(i -> (i <= 57 || i >= 65) && (i <= 90 || i >= 97))
-                .limit(targetStringLength)
-                .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
-                .toString();
-    return generatedString
+        builder.setCharAt(new Random().nextInt(0,randomLength - 1), (char) new Random().nextInt(97,122));
+        builder.setCharAt(new Random().nextInt(0,randomLength - 1), (char) new Random().nextInt(97,122));
+        builder.setCharAt(new Random().nextInt(0,randomLength - 1), (char) new Random().nextInt(0,9));
+        builder.setCharAt(new Random().nextInt(0,randomLength - 1), (char) new Random().nextInt(65,90));
+        builder.setCharAt(new Random().nextInt(0,randomLength - 1), (char) new Random().nextInt(65,90));
+        builder.setCharAt(new Random().nextInt(0,randomLength - 1), (char) new Random().nextInt(65,90));
+        builder.setCharAt(new Random().nextInt(0,randomLength - 1), (char) new Random().nextInt(65,90));
+        builder.setCharAt(new Random().nextInt(0,randomLength - 1), (char) new Random().nextInt(65,90));
+        builder.setCharAt(new Random().nextInt(0,randomLength - 1), (char) new Random().nextInt(58,63));
+        builder.setCharAt(new Random().nextInt(0,randomLength - 1), (char) new Random().nextInt(58,63));
+        builder.setCharAt(new Random().nextInt(0,randomLength - 1), (char) new Random().nextInt(58,63));
+        builder.setCharAt(new Random().nextInt(0,randomLength - 1), (char) new Random().nextInt(58,63));
+        return builder.toString();
     }
 
     /*public static void CheckPassword()
