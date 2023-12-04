@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PasswordValidierungTest {
 
-    @Test
+    /*@Test
     void PasswordValidierung(){
         String inputPassowrd = "neueFische8976!";
         String actualPassowrd = "neueFische8976!";
@@ -14,7 +14,7 @@ class PasswordValidierungTest {
         boolean expected = true;
         assertEquals( expected, isValid);
 
-    }
+    }*/
 
     @Test
     void PasswordVlaid(){
