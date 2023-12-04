@@ -43,23 +43,22 @@ public class PasswordValidierung {
 
     public static String passwordGenerate() {
         StringBuilder builder = new StringBuilder();
-        int randomLength = new Random().nextInt(8, 99);
-        for (int i = 0; i < randomLength; i++) {
+        int randomLength = new Random().nextInt(8, 15);
+        for (int i = 0; i <= randomLength; i++) {
             char a = (char) new Random().nextInt(33, 126);
+
             builder.append(a);
+
+
         }
-        builder.setCharAt(new Random().nextInt(0, randomLength - 1), (char) new Random().nextInt(97, 122));
-        builder.setCharAt(new Random().nextInt(0, randomLength - 1), (char) new Random().nextInt(97, 122));
-        builder.setCharAt(new Random().nextInt(0, randomLength - 1), (char) new Random().nextInt(0, 9));
-        builder.setCharAt(new Random().nextInt(0, randomLength - 1), (char) new Random().nextInt(65, 90));
-        builder.setCharAt(new Random().nextInt(0, randomLength - 1), (char) new Random().nextInt(65, 90));
-        builder.setCharAt(new Random().nextInt(0, randomLength - 1), (char) new Random().nextInt(65, 90));
-        builder.setCharAt(new Random().nextInt(0, randomLength - 1), (char) new Random().nextInt(65, 90));
-        builder.setCharAt(new Random().nextInt(0, randomLength - 1), (char) new Random().nextInt(65, 90));
-        builder.setCharAt(new Random().nextInt(0, randomLength - 1), (char) new Random().nextInt(58, 63));
-        builder.setCharAt(new Random().nextInt(0, randomLength - 1), (char) new Random().nextInt(58, 63));
-        builder.setCharAt(new Random().nextInt(0, randomLength - 1), (char) new Random().nextInt(58, 63));
-        builder.setCharAt(new Random().nextInt(0, randomLength - 1), (char) new Random().nextInt(58, 63));
+
+
+
+        builder.setCharAt(new Random().nextInt(0, randomLength - 1), (char) new Random().nextInt(48, 57));
+        builder.setCharAt(new Random().nextInt(0, randomLength - 1), (char) new Random().nextInt(48, 57));
+        builder.setCharAt(new Random().nextInt(0, randomLength - 1), (char) new Random().nextInt(48, 57));
+        builder.setCharAt(new Random().nextInt(0, randomLength - 1), (char) new Random().nextInt(48, 57));
+
         return builder.toString();
     }
 

@@ -16,3 +16,5 @@ G.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec,8/6/86
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 Z
 *src/test/java/PasswordValidierungTest.java,1/7/1709f2d9644a2fade0f7d0753e554cef849211e7
+X
+(src/main/java/PasswordValidatorPaul.java,7/3/734abd27ed52c732e07fbdeb301ea28d8b62a9eb
