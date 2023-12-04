@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class PasswordValidierung {
@@ -65,8 +66,25 @@ public class PasswordValidierung {
         return passwordIsValid;
 
     }
+    public static String password() {
+        StringBuilder genreatedString = new StringBuilder();
 
-    public static void CheckPassword()
+        Random randomChar = new Random();
+        for (int i = 0; i <= 15; i++){
+            genreatedString.append(i).
+        }
+
+
+
+        String generatedString = random.ints(leftLimit, rightLimit + 1)
+                .filter(i -> (i <= 57 || i >= 65) && (i <= 90 || i >= 97))
+                .limit(targetStringLength)
+                .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+                .toString();
+    return generatedString
+    }
+
+    /*public static void CheckPassword()
     {
         String[] commonPass =  {"1234", "testing", "dragon", "password","Test", "test","passwort","abc","ABC","Abc","aBc","ABc","abC","aBC", "9876", "qwerty", "football","111111","1111","letmein","trustnot","princess","Iloveu","Iloveyou","iloveyou","sunshine","Sunshine","adobe123","123456789"};
 
@@ -101,7 +119,7 @@ public class PasswordValidierung {
     public static void main(String[] args) {
         CheckPassword();
         System.out.println("was Sucessful!");
-    }
+    }*/
 
 
 
